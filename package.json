@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@open-wa/wa-automate": "^1.9.73",
+    "date-fns": "^2.14.0",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "node-fetch": "^2.6.0"

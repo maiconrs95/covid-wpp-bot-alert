@@ -1,8 +1,17 @@
 import fetch from 'node-fetch';
-import { create, Client } from '@open-wa/wa-automate';
+import { create } from '@open-wa/wa-automate';
 import dotenv from 'dotenv';
 
 import formatMessage from './utils/formatMessage';
+
+function getByUf(uf = 'SP') {
+    return new Promise((resolve, reject) => {
+        fetch(`https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/${uf}`)
+            .then(response => response.json())
+            .then(resolve)
+            .catch(reject)
+    });
+}
 
 function getByCountry(country = 'brazil') {
     return new Promise((resolve, reject) => {
@@ -22,12 +31,11 @@ function getByCountry(country = 'brazil') {
     const contactsToAlert = allContacts.filter(contact => sendTo.includes(contact.name));
 
     const covidInBrazil = await getByCountry();
+    const covidInSP = await getByUf();
 
-    console.log(covidInBrazil);
-
-    // await Promise.all(contactsToAlert.map((contact) => {
-    //     return client.sendText(contact.id, formatMessage(covidInBrazil));
-    // }));
+    await Promise.all(contactsToAlert.map((contact) => {
+        return client.sendText(contact.id, formatMessage(contact.name, covidInBrazil, covidInSP));
+    }));
 
     process.exit(1);
 })();
