@@ -1,0 +1,14 @@
+{
+  "name": "covid-alert",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node -r esm src/index.js"
+  },
+  "dependencies": {
+    "@open-wa/wa-automate": "^1.9.73",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25"
+  }
+}
