@@ -27,6 +27,7 @@ npm run start || yarn start
 
 * [dotenv](https://www.npmjs.com/package/dotenv)
 * [wa-automate](https://github.com/open-wa/wa-automate-nodejs)
+* [date-fns](https://date-fns.org/docs/Getting-Started)
 
 ## Contributing
 
