@@ -17,11 +17,24 @@ These instructions will get you a copy of the project up and running on your loc
 npm i || yarn
 ```
 
+### Add .env file and contacts
+
+```
+touch .env
+```
+
+Add contacts to send messages in `.env` file
+
+```
+CONTACTS="Contact 1,Contact 2,Contact 3"
+```
+
 ### Run projetct
 
 ```
 npm run start || yarn start
 ```
+
 
 ## Built With
 
