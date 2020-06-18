@@ -1,15 +1,15 @@
 # Covid Whatsapp bot alert
 
-A bot to alert  whatsapp contacts about covid-19 :speech_balloon:
+[![licence mit](https://img.shields.io/badge/Licence-MIT-green.svg)](https://github.com/maiconrs95/covid-wpp-bot-alert/blob/master/LICENSE.md)
 
-## Getting Started
+A bot to alert whatsapp contacts about covid-19 :speech_balloon:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
+## Prerequisites
 
 - [nodejs](https://nodejs.org/en/)
 - [wpp-account](https://www.whatsapp.com/?lang=pt_br)
+
+## Getting Started
 
 ### Installing
 
@@ -23,7 +23,7 @@ npm i || yarn
 touch .env
 ```
 
-Add contacts to send messages in `.env` file
+Add contacts to send messages in `.env` file, ex:
 
 ```
 CONTACTS="Contact 1,Contact 2,Contact 3"
@@ -55,10 +55,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - [MIT License](./LICENSE.md) © [Maicon Silva](https://maiconsilva.com/)
