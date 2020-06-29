@@ -1,8 +1,7 @@
 import { format, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 
-export default (name, countryCases, stateCases) => (`
-    Olá, ${name}.
+export default (countryCases, stateCases) => (`
     Aqui está seu relatório sobre a covid-19 no seu país e cidade :D
 
     ${countryCases.country}:
